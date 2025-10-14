@@ -10,7 +10,7 @@ on:
    
    jobs:
        Multiple runners:
-                runs on: ubuntu-latest, windows-latest, mac-latest
+                runs on: [ubuntu-latest, windows-latest, mac-latest]
 
                 steps:
                    - name: print multiple runners
