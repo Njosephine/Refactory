@@ -1,1 +1,18 @@
 # A yaml file that prints a sentence while using the ubuntu,windows,and mac runners
+
+#Name of the workflow
+name: Multiple runner workflow
+
+on:
+   
+   push:
+       branches: [main]
+   
+   jobs:
+       Multiple runners:
+                runs on: ubuntu-latest, windows-latest, mac-latest
+
+                steps:
+                   - name: print multiple runners
+                     run: echo "multiple runners"
+
