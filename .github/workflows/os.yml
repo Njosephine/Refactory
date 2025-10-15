@@ -1,23 +1,41 @@
 # A yaml file that prints a sentence while using the ubuntu,windows,and mac runners
 
 #Name of the workflow
+# name: Multiple runner workflow
+
+# on:
+   
+#    push:
+#        branches: [main]
+   
+#    jobs:
+#        Multiple_runners:
+           
+#         strategy:
+#           matrix:
+#             os: [ubuntu-latest, windows-latest, macos-latest]
+
+#         runs-on: ${{matrix.os}}
+
+#         steps:
+#         - name: print multiple runners
+#           run: echo "multiple runners"
+
+
 name: Multiple runner workflow
 
 on:
-   
-   push:
-       branches: [main]
-   
-   jobs:
-       Multiple_runners:
-           
-        strategy:
-          matrix:
-            os: [ubuntu-latest, windows-latest, macos-latest]
+  push:
+    branches: [main]
 
-        runs-on: ${{matrix.os}}
+jobs:
+  Multiple_runners:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
-        steps:
-        - name: print multiple runners
-          run: echo "multiple runners"
+    runs-on: ${{ matrix.os }}
 
+    steps:
+      - name: print multiple runners
+        run: echo "multiple runners"
