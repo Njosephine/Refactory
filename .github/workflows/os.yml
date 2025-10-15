@@ -1,6 +1,7 @@
 # A yaml file that prints a sentence while using the ubuntu,windows,and mac runners
 
 #Name of the workflow
+#workflow = event -> runner -> jobs -> steps ->actions
 name: Multiple runner workflow
 
 on:
