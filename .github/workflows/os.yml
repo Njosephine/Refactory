@@ -10,9 +10,14 @@ on:
    
    jobs:
        Multiple runners:
-                runs on: [ubuntu-latest, windows-latest, mac-latest]
+           
+           strategy:
+               matrix:
+                os: [ubuntu-latest, windows-latest, mac-latest]
 
-                steps:
-                   - name: print multiple runners
-                     run: echo "multiple runners"
+           runs-on: ${{matrix.os}}
+
+           steps:
+            - name: print multiple runners
+              run: echo "multiple runners"
 
