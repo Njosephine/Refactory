@@ -18,8 +18,8 @@ jobs:
     runs-on: ${{matrix.os}}
 
     steps:
-      - name: print multiple runners
-        run: echo "multiple runners"
+      - name: print Nanyonga Josephine
+        run: echo "Nanyonga Josephine"
 
 
 # name: Multiple runner workflow
